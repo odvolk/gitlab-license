@@ -56,6 +56,18 @@ license.restrictions = {
   :id   => rand(1000..99999999)
 }
 
+# The date admins will be notified about the license's pending expiration.
+# Required since v14.7
+license.notify_admins_at  = Date.new(2025, 4, 19)
+
+# The date regular users will be notified about the license's pending expiration.
+# Required since v14.7
+license.notify_users_at   = Date.new(2025, 4, 23)
+
+# The date "changes" like code pushes, issue or merge request creation
+# or modification and project creation will be blocked.
+# Required since v14.7
+license.block_changes_at  = Date.new(2025, 5, 7)
 # Export the license, which encrypts and encodes it.
 data = license.export
 
